@@ -34,41 +34,48 @@
         <link rel="stylesheet" href="css/style.css" />
         <!-- responsive css -->
         <link rel="stylesheet" href="css/responsive.css" />
+        <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.19.0.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
         <!--[if IE]>
+            
             <script src="js/html5shiv.js"></script>
         <![endif]-->
     </head>
     <body>
         <!-- start header -->
         <header>
-            <!-- start navigation -->
-            <nav class="navbar navbar-default bootsnav navbar-top header-light bg-transparent nav-box-width white-link">
-                <div class="container-fluid nav-header-container">
-                    <div class="row">
-                        <!-- start logo -->
-                        <div class="col-md-2 col-xs-5">
-                            <a href="index.html" title="VTS" class="logo"><img src="#" data-at2x="images/logo@2x.png" class="logo-dark" alt="vts"><img src="images/logo-white.png" data-at2x="images/logo-white@2x.png" alt="vts" class="logo-light default"></a>
-                        </div>
-                        <!-- end logo -->
-                        
-        </header>
-        <!-- end header -->
-        <!-- start page title section -->
-        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('images/cover.jpg');">
-            <div class="opacity-medium bg-extra-dark-gray"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
-                        <div class="display-table-cell vertical-align-middle text-center">
-                            <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Real Time Location</h1>
-                            <!-- end page title --> 
+                <!-- start navigation -->
+                <nav class="navbar navbar-default bootsnav nav-top-scroll bg-black nav-box-width black-link padding-four-lr menu-logo-center">
+                    <div class="container nav-header-container text-black">
+                        <div class="row">
+                            <div class="center-logo">
+                                <a href="index.html" title="VTS" class="logo"><img src="images/logoblack.png" data-at2x="images/logo.png" class="logo-dark" alt="VTS"><img src="images/logoblack.png" data-at2x="images/logo.png" alt="VTS" class="logo-light default"></a>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 accordion-menu">
+                                
+                                <div class="navbar-collapse collapse no-padding-right" id="navbar-collapse-toggle-1">
+                                    <ul class="nav navbar-nav navbar-left text-right no-margin alt-font text-normal width-40 sm-width-100 sm-text-left" data-in="fadeIn" data-out="fadeOut">
+                                        <!-- start menu item -->
+                                        <li class="dropdown megamenu-fw text-black">
+                                            <a href="javascript:void(0);">Electronic Product Development</a><i class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
+                                        </li>
+                                        <!-- end menu item -->
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right no-margin alt-font text-normal width-40 sm-width-100" data-in="fadeIn" data-out="fadeOut">
+                                        <li class="dropdown simple-dropdown"><a href="javascript:void(0);" title="VTS">Vehicular Tracking System</a><i class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- end page title section --> 
+                </nav>
+                <!-- end navigation -->  
+            </header>
+        <!-- end header -->
+    
         <!-- start post content section --> 
         <section>
             <div class="container">
@@ -76,11 +83,12 @@
                     <main class="col-md-12 no-padding-lr">
                         <!-- start post item --> 
                         <div class="col-md-12 col-sm-12 col-xs-12 blog-post-content margin-60px-bottom xs-margin-30px-bottom xs-text-center">
-                            <a href="https://www.google.com/maps/d/u/1/edit?mid=1-bbAbB4YBsMdyChFsIhb3oSisFkTHvZ2&ll=23.04946407461008%2C72.56229499999995&z=15" class="blog-image"><img src="images/cover.jpg" alt=""></a>
+                                <div id="map-canvas" style="widows: 1200px;height:400px"></div>
+                            <!--a href="https://www.google.com/maps/d/u/1/edit?mid=1-bbAbB4YBsMdyChFsIhb3oSisFkTHvZ2&ll=23.04946407461008%2C72.56229499999995&z=15" class="blog-image"><img src="images/cover.jpg" alt=""></a-->
                             <div class="blog-text border-all display-inline-block width-100">
                                 <div class="content padding-50px-all xs-padding-20px-all">
-                                    <div class="text-medium-gray text-extra-small margin-5px-bottom text-uppercase alt-font"><span>Posted on June 30, 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span><a href="#" class="text-medium-gray ">Company Name</a></span></div>
-                                    <a href="blog-standard-post.html" class="text-extra-dark-gray text-uppercase  alt-font text-large font-weight-600 margin-15px-bottom display-block">This is a standard post with a preview Map</a>
+                                    <div class="text-medium-gray text-extra-small margin-5px-bottom text-uppercase alt-font"><span>Updated Last on November 20, 2018</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span><a href="#" class="text-medium-gray ">Company Name</a></span></div>
+                                    <a href="#" class="text-extra-dark-gray text-uppercase  alt-font text-large font-weight-600 margin-15px-bottom display-block">This is the live track for the vehicle XX-XX-XXXX</a>
                                     <p class="no-margin">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry industry’s standard dummy text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.</p>
                                 </div>
                                
@@ -130,22 +138,59 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="container">
-                <div class="footer-bottom border-top border-color-medium-dark-gray padding-30px-top">
-                    <div class="row">
-                        <!-- start copyright -->
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center">Vehicular Tracking System</div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center">&COPY; All Rights Reserved</a></div>
-                        <!-- end copyright -->
-                    </div>
-                </div>
-            </div>
         </footer>
         <!-- end footer -->
         <!-- start scroll to top -->
         <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
         <!-- end scroll to top  -->
+        <script>
+            window.lat = 23.036968;
+            window.lng = 72.551997;
+        
+            var map;
+            var mark;
+            var lineCoords = [];
+              
+            var initialize = function() {
+              map  = new google.maps.Map(document.getElementById('map-canvas'), {center:{lat:lat,lng:lng},zoom:12});
+              mark = new google.maps.Marker({position:{lat:lat, lng:lng}, map:map});
+            };
+        
+            window.initialize = initialize;
+        
+            var redraw = function(payload) {
+              lat = payload.message.lat;
+              lng = payload.message.lng;
+        
+              map.setCenter({lat:lat, lng:lng, alt:0});
+              mark.setPosition({lat:lat, lng:lng, alt:0});
+              
+              lineCoords.push(new google.maps.LatLng(lat, lng));
+        
+              var lineCoordinatesPath = new google.maps.Polyline({
+                path: lineCoords,
+                geodesic: true,
+                strokeColor: '#2E10FF'
+              });
+              
+              lineCoordinatesPath.setMap(map);
+            };
+        
+            var pnChannel = "map3-channel";
+        
+            var pubnub = new PubNub({
+              publishKey:   'pub-c-9362aa11-def0-47ac-a511-e0c18a229d7a',
+              subscribeKey: 'sub-c-c27fe702-ea54-11e8-94ac-c2131701f6c5'
+            });
+        
+            pubnub.subscribe({channels: [pnChannel]});
+            pubnub.addListener({message:redraw});
+        
+            setInterval(function() {
+              pubnub.publish({channel:pnChannel, message:{lat:window.lat + 0.001, lng:window.lng + 0.01}});
+            }, 500);
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyC3Lbl9JQFrZnFHsEtLK2dl1s2BpoHWVnk&callback=initialize"></script>
         <!-- javascript libraries -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/modernizr.js"></script>
