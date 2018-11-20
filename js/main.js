@@ -1,5 +1,21 @@
 "use strict";
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA1hJPnZuORdAMLBixmXoRFQuPmLRPcQAk",
+    authDomain: "vehicular-tracki-1542016554991.firebaseapp.com",
+    databaseURL: "https://vehicular-tracki-1542016554991.firebaseio.com",
+    projectId: "vehicular-tracki-1542016554991",
+    storageBucket: "vehicular-tracki-1542016554991.appspot.com",
+    messagingSenderId: "398862431306"
+  };
+  firebase.initializeApp(config);
+
 var lastScroll = 0;
+
+//Reference Message collection
+
+var messagesRef = firebase.database().ref(messages);
 
 //check for browser os
 var isMobile = false;
@@ -2325,8 +2341,31 @@ $(document).ready(function () {
 /* ===================================
  END READY
  ====================================== */
+ //Firebase connect
+ document.getElementById('vehicleform').addEventListener('submit', submitForm);
+ function submitForm(e){
+     e.preventDefault();
+    var lnumber = getInputVal('lnumber');
+    var vlocation = getInputVal('vlocation');
+    var vowner = getInputVal('vowner');
+    var vdescription = getInputVal('vdescription');
 
+    saveMessage(lnumber, vlocation, vowner, vdescription);
+    }
+function getInputVal(id){
+return document.getElementById(id).value;
+}
 
+//Save Message
+function saveMessage(lnumber, vlocation, vowner, vdescription){
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+        lnumber: lnumber,
+        vlocation: vlocation,
+        vowner: vowner,
+        vdescription: vdescription
+    })
+}
 /* ===================================
  START Page Load
  ====================================== */
