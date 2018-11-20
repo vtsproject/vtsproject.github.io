@@ -2339,7 +2339,7 @@ var config = {
   firebase.initializeApp(config);
 //Reference Message collection
 
-var messagesRef = firebase.database().ref(messages);
+var messagesRef = firebase.database().ref('messages');
 
  //Firebase connect
  document.getElementById('vehicleform').addEventListener('submit', submitForm);
