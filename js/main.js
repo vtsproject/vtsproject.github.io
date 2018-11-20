@@ -1,21 +1,7 @@
 "use strict";
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA1hJPnZuORdAMLBixmXoRFQuPmLRPcQAk",
-    authDomain: "vehicular-tracki-1542016554991.firebaseapp.com",
-    databaseURL: "https://vehicular-tracki-1542016554991.firebaseio.com",
-    projectId: "vehicular-tracki-1542016554991",
-    storageBucket: "vehicular-tracki-1542016554991.appspot.com",
-    messagingSenderId: "398862431306"
-  };
-  firebase.initializeApp(config);
-
 var lastScroll = 0;
 
-//Reference Message collection
 
-var messagesRef = firebase.database().ref(messages);
 
 //check for browser os
 var isMobile = false;
@@ -2341,6 +2327,20 @@ $(document).ready(function () {
 /* ===================================
  END READY
  ====================================== */
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyA1hJPnZuORdAMLBixmXoRFQuPmLRPcQAk",
+    authDomain: "vehicular-tracki-1542016554991.firebaseapp.com",
+    databaseURL: "https://vehicular-tracki-1542016554991.firebaseio.com",
+    projectId: "vehicular-tracki-1542016554991",
+    storageBucket: "vehicular-tracki-1542016554991.appspot.com",
+    messagingSenderId: "398862431306"
+  };
+  firebase.initializeApp(config);
+//Reference Message collection
+
+var messagesRef = firebase.database().ref(messages);
+
  //Firebase connect
  document.getElementById('vehicleform').addEventListener('submit', submitForm);
  function submitForm(e){
